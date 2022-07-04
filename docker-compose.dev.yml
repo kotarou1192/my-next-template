@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  next-dev:
+    build:
+      context: . # dockerfile root path
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - 3080:3000
